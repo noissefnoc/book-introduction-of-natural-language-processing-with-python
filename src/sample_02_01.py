@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 import urllib.request
+import cchardet
 
 if __name__ == '__main__':
     # "Japanese" wikipedia page URL written by Japanese
@@ -9,6 +10,6 @@ if __name__ == '__main__':
     with urllib.request.urlopen(url) as res:
         byte = res.read()
 
-        # convert character encoding
-        html = byte.decode('utf-8')
+        # convert character encoding (auto detect by cchardet)
+        html = byte.decode(cchardet.detect(byte)['encoding'])
         print(html)
