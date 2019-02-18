@@ -1,0 +1,8 @@
+# virtual env
+venv
+
+# macOS preview thumbnail
+.DS_Store
+
+# IDE setting
+.idea
