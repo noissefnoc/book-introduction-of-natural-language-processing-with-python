@@ -19,10 +19,10 @@
 
 
 ### 第一部 データを準備しよう
+
 #### 1章 実行環境を整えよう
 
 本書はWindows 10のWindows Subsystem for Linux上でのUbuntuに
-
 
 * Python 3：プログラミング言語
 * Solr：検索エンジン
