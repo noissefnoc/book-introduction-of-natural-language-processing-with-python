@@ -9,6 +9,6 @@ if __name__ == '__main__':
     with urllib.request.urlopen(url) as res:
         byte = res.read()
 
-        # convert character encording
+        # convert character encoding
         html = byte.decode('utf-8')
         print(html)
