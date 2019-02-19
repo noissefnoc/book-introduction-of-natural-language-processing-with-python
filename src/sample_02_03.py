@@ -2,6 +2,7 @@
 
 import urllib.request
 import cchardet
+from bs4 import BeautifulSoup
 
 if __name__ == '__main__':
     # "Japanese" wikipedia page URL written by Japanese
@@ -12,4 +13,10 @@ if __name__ == '__main__':
 
         # convert character encoding (auto detect by cchardet)
         html = byte.decode(cchardet.detect(byte)['encoding'])
-        print(html)
+        soup = BeautifulSoup(html, 'html.parser')
+
+        title = soup.head.title
+        print('[title]:', title.text, '\n')
+
+        for block in soup.find_all(['p', 'h1', 'h2', 'h3', 'h4']):
+            print('[block]:', block.text)
