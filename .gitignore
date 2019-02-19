@@ -6,3 +6,6 @@ venv
 
 # IDE setting
 .idea
+
+# exclude pycache
+src/__pycache__
