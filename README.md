@@ -20,7 +20,7 @@
 
 ### 第一部 データを準備しよう
 
-#### 1章 実行環境を整えよう
+#### 第1章 実行環境を整えよう
 
 本書はWindows 10のWindows Subsystem for Linux上でのUbuntuに
 
@@ -45,3 +45,17 @@
     * Python Web App
     * Solr：dockerの公式イメージ
     * CaboCha：Python Web Appと同居か別かは後の章で決める
+
+
+#### 第2章 テキストデータを収集しよう
+
+* スクレイピングの教養的な話
+    * HTML (DOM) など
+    * `robots.txt` の話。今回は「気をつけようね」レベル
+* 文字コードの話
+    * 昔のサイト(特にHTMLを書いてアップロードしているもの)だと文字コード違うこともある
+    * エンコードをサイトごとに調べるのは現実的ではないので、 `cchartdet` を使う
+* HTML (DOM) のパースは `BeautifulSoup` を使う
+* テキストデータのクレンジング
+    * NFKC 対応は `unicodedata.normalize` で実施
+* 独自構文を設定し、取得してパースした結果を出力する
