@@ -9,3 +9,6 @@ venv
 
 # exclude pycache
 src/__pycache__
+
+# wikipedia crawling files
+data/wikipedia/*.html
