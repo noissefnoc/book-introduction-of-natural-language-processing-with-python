@@ -12,3 +12,6 @@ src/__pycache__
 
 # wikipedia crawling files
 data/wikipedia/*.html
+
+# sqlite file
+sample.db

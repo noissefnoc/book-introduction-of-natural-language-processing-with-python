@@ -1,0 +1,15 @@
+version: '2'
+services:
+  solr:
+    image: solr
+    ports:
+      - "8983:8983"
+    volumes:
+      - solr-data:${DATA_PATH}
+    entrypoint:
+      - docker-entrypoint.sh
+      - solr-precreate
+      - mycore
+volumes:
+  solr-data:
+    driver: local
