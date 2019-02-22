@@ -66,3 +66,21 @@
 * 収集したデータを管理するために使うデータベースと検索エンジンにデータロードする話
     * SQLite3
     * Solr
+        * dockerの公式イメージ([solr](https://hub.docker.com/_/solr/))を利用
+        * `docker-compose.yml` を作成
+
+
+### 第二部 テキストデータを解析しよう
+
+#### 第4章 構文解析をしよう
+
+* Cabochaのインストール。依存関係によりCRF++とMeCabとCabochaもインストールすることになる
+* Cabocha, CRF++, MeCabは `brew install` でインストールできるが、CabochaのPythonバインディングが `pip` にないのでソース落としてきてのインストール
+    * CabochaのPythonバインドのインストールは以下手順 ※TODO: 後で環境構成が確定したらdockerイメージ作成
+```
+$ curl -OL https://github.com/taku910/cabocha/archive/master.zip
+$ unzip master.zip
+$ cd cabocha-master
+$ pip install python/
+```
+* Cabochaで文章をチャンク単位に分解してSQLite3に格納するまでがこの章の内容
