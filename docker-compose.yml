@@ -9,7 +9,7 @@ services:
     entrypoint:
       - docker-entrypoint.sh
       - solr-precreate
-      - docs
+      - doc
 volumes:
   solr-data:
     driver: local
